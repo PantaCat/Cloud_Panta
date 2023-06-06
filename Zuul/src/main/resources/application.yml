@@ -7,7 +7,7 @@ zuul:
   prefix: /cloud #路径前缀
   ignored-services: "*"  #关闭服务名称查询  服务名称也行，“*”=关闭全部名称
   routes:
-    demoservice: /api/**
+    demoservice: /api/**  #自定义路由地址(搭配关闭服务名访问配置使用)
 eureka:
   client:
     service-url:
