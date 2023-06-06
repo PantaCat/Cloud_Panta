@@ -4,8 +4,13 @@ spring:
   application:
     name: Zuul
 zuul:
-  prefix: /panta
+  prefix: /cloud #路径前缀
+  ignored-services: "*"  #关闭服务名称查询  服务名称也行，“*”=关闭全部名称
+  routes:
+    demoservice: /api/**
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:9099/eureka
+
+
