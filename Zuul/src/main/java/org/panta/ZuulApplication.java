@@ -10,6 +10,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulServer;
 @SpringBootApplication
 public class ZuulApplication {
     public static void main(String []args){
+        //Zuul启动类
         SpringApplication.run(ZuulApplication.class);
     }
 
