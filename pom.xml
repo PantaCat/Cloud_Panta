@@ -11,6 +11,7 @@
     <modules>
         <module>Eureka</module>
         <module>Zuul</module>
+        <module>ServiceDemo</module>
     </modules>
 
     <!-- 1 确定spring boot的版本-->
