@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Zuul" />
-        <module name="Eureka" />
         <module name="ServiceDemo" />
+        <module name="ServiceMain" />
+        <module name="VuePosteriorCanal" />
+        <module name="Eureka" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,6 +19,8 @@
       <module name="Cloud_Panta" options="" />
       <module name="Eureka" options="-parameters" />
       <module name="ServiceDemo" options="-parameters" />
+      <module name="ServiceMain" options="-parameters" />
+      <module name="VuePosteriorCanal" options="-parameters" />
       <module name="Zuul" options="-parameters" />
     </option>
   </component>
