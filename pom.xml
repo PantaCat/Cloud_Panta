@@ -13,7 +13,7 @@
         <module>Zuul</module>
         <module>ServiceDemo</module>
         <module>ServiceMain</module>
-        <module>VuePosteriorCanal</module>
+        <module>CloudCommon</module>
     </modules>
 
     <!-- 1 确定spring boot的版本-->

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,13 +10,17 @@
         <module name="Zuul" />
         <module name="ServiceDemo" />
         <module name="ServiceMain" />
-        <module name="VuePosteriorCanal" />
         <module name="Eureka" />
+        <module name="CloudCommon" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="VuePosteriorCanal" target="8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CloudCommon" options="-parameters" />
       <module name="Cloud_Panta" options="" />
       <module name="Eureka" options="-parameters" />
       <module name="ServiceDemo" options="-parameters" />

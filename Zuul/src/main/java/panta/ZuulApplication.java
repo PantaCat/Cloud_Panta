@@ -1,19 +1,17 @@
 package panta;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
+@EnableZuulProxy
 @EnableEurekaClient
-@EnableFeignClients
 @SpringBootApplication
-@MapperScan(value = "panta.mapper.*")
-public class ServiceDemoApplication {
+public class ZuulApplication {
     public static void main(String []args){
-        //启动类
-        SpringApplication.run(ServiceDemoApplication.class);
+        //Zuul启动类
+        SpringApplication.run(ZuulApplication.class);
     }
 
 }
