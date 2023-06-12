@@ -23,7 +23,7 @@ public class DemoController {
     }
 
     @PostMapping("/getDate")
-    public String getDate(@RequestBody DemoModel demo){
+    public String getDate(){
         DateCommonUtil dateCommonUtil = new DateCommonUtil();
         return dateCommonUtil.dateFormatFormat(SimpleDateFormatType.dateFormatYYYYMMDDHHmmss.getType(),new Date());
     }
