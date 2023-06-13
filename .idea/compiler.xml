@@ -15,7 +15,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="VuePosteriorCanal" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
