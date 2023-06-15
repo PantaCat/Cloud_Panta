@@ -9,4 +9,7 @@ public interface MainFeignClient {
 
     @RequestMapping("/getDemo")
     DemoModel getDemo(DemoModel demoModel);
+
+    @RequestMapping("/addDemo")
+    boolean addDemo(DemoModel demoModel);
 }

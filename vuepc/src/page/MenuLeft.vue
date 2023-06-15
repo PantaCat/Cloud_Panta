@@ -15,7 +15,7 @@
             <span>记录本</span>
           </template>
             <el-menu-item index="/about">临时区域</el-menu-item>
-            <el-menu-item index="1-2">item two</el-menu-item>
+            <el-menu-item index="/demoView">DEMO</el-menu-item>
           <el-sub-menu index="1-4">
             <template #title>item four</template>
             <el-menu-item index="1-4-1">item one</el-menu-item>

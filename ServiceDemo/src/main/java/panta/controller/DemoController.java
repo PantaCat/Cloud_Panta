@@ -22,6 +22,17 @@ public class DemoController {
         return demoModel;
     }
 
+    @PostMapping("/addDemo")
+    public boolean addDemo(@RequestBody DemoModel demo){
+        try{
+            demoFeignClient.addDemo(demo);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
     @PostMapping("/getDate")
     public String getDate(){
         DateCommonUtil dateCommonUtil = new DateCommonUtil();

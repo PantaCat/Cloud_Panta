@@ -16,4 +16,15 @@ public class DemoController {
         DemoModel demoModel = demoService.getDemo(demo);
         return demoModel;
     }
+
+    @PostMapping("/addDemo")
+    public boolean addDemo(@RequestBody DemoModel demo){
+        try{
+            demoService.addDemo(demo);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 }

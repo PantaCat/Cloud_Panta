@@ -25,4 +25,8 @@
         </where>
     </select>
 
+    <insert id="addDemo" parameterType="panta.model.demo.DemoModel">
+        INSERT INTO `panta`.`demo`(`name`, `number`) VALUES (#{name}, #{number});
+    </insert>
+
 </mapper>

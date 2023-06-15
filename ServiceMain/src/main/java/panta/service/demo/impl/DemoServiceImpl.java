@@ -17,4 +17,9 @@ public class DemoServiceImpl implements DemoService {
     public DemoModel getDemo(DemoModel demoModel) {
         return demoMapper.getDemo(demoModel);
     }
+
+    @Override
+    public DemoModel addDemo(DemoModel demoModel) {
+        return demoMapper.addDemo(demoModel);
+    }
 }

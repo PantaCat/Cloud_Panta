@@ -1,6 +1,6 @@
 <template>
   <div style="padding: 100px;">
-    <QuillEditor ref="quillEditorRef" style="width: 100%; height: 250px;"/>
+    <QuillEditor ref="quillEditorRef" style="width: 80%; height: 250px;"/>
 
     <p style="text-align: center; margin-top: 10px;">
       <el-button type="primary" plain @click="handleSetContentClick($event)">设置内容</el-button>

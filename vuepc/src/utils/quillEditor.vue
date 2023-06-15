@@ -7,6 +7,7 @@
     :disabled="true"
     :content="content"
     :options="options"
+
   />
 </template>
 
