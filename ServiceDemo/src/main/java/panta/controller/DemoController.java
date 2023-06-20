@@ -40,7 +40,7 @@ public class DemoController {
             System.out.println("从数据库中获取数据");
             demoModel = demoService.getDemo(demo);
             //数据插入缓存（set中的参数含义：key值，user对象，缓存存在时间10（long类型），时间单位）
-            redisUtils.set(demo.getId().toString(),demoModel,10L, TimeUnit.MINUTES);
+            //redisUtils.set(demo.getId().toString(),demoModel,10L, TimeUnit.MINUTES);
             redisUtils.set(demo.getId().toString(), demoModel, 10, true, null);
             System.out.println("数据插入缓存" + demoModel.toString());
         }
