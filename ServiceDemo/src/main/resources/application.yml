@@ -1,6 +1,9 @@
 server:
   port: 9000
 spring:
+  #当出现相同名字的类进行注册时，准许覆盖注册
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: demoservice
   datasource:
@@ -14,3 +17,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:9099/eureka
+
+
+

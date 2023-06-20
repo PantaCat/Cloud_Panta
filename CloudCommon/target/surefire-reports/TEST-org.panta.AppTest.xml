@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.panta.AppTest" time="0.007" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.panta.AppTest" time="0.002" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -7,7 +7,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.class.path" value="D:\IdeaProjects\Cloud\Cloud_Panta\CloudCommon\target\test-classes;D:\IdeaProjects\Cloud\Cloud_Panta\CloudCommon\target\classes;D:\Yooli\mavencangku\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="java.class.path" value="D:\IdeaProjects\Cloud\Cloud_Panta\CloudCommon\target\test-classes;D:\IdeaProjects\Cloud\Cloud_Panta\CloudCommon\target\classes;D:\Yooli\mavencangku\junit\junit\3.8.1\junit-3.8.1.jar;D:\Yooli\mavencangku\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;D:\Yooli\mavencangku\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;D:\Yooli\mavencangku\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -18,8 +18,8 @@
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="D:\Java\jdk1.8.0_231\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\PANTA~1\AppData\Local\Temp\surefire6625959570504996032\surefirebooter4576328010232945352.jar C:\Users\Panta·猫\AppData\Local\Temp\surefire6625959570504996032 2023-06-13T10-46-02_214-jvmRun1 surefire3870584389861733229tmp surefire_02914079844941286187tmp"/>
-    <property name="surefire.test.class.path" value="D:\IdeaProjects\Cloud\Cloud_Panta\CloudCommon\target\test-classes;D:\IdeaProjects\Cloud\Cloud_Panta\CloudCommon\target\classes;D:\Yooli\mavencangku\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="sun.java.command" value="C:\Users\PANTA~1\AppData\Local\Temp\surefire4763061027179453274\surefirebooter7920341692905561572.jar C:\Users\Panta·猫\AppData\Local\Temp\surefire4763061027179453274 2023-06-20T17-29-51_063-jvmRun1 surefire7662597947995670508tmp surefire_04701815147005241668tmp"/>
+    <property name="surefire.test.class.path" value="D:\IdeaProjects\Cloud\Cloud_Panta\CloudCommon\target\test-classes;D:\IdeaProjects\Cloud\Cloud_Panta\CloudCommon\target\classes;D:\Yooli\mavencangku\junit\junit\3.8.1\junit-3.8.1.jar;D:\Yooli\mavencangku\com\fasterxml\jackson\core\jackson-databind\2.9.8\jackson-databind-2.9.8.jar;D:\Yooli\mavencangku\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;D:\Yooli\mavencangku\com\fasterxml\jackson\core\jackson-core\2.9.8\jackson-core-2.9.8.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Panta·猫"/>
     <property name="user.language" value="zh"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\PANTA~1\AppData\Local\Temp\surefire6625959570504996032\surefirebooter4576328010232945352.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\PANTA~1\AppData\Local\Temp\surefire4763061027179453274\surefirebooter7920341692905561572.jar"/>
     <property name="sun.boot.class.path" value="D:\Java\jdk1.8.0_231\jre\lib\resources.jar;D:\Java\jdk1.8.0_231\jre\lib\rt.jar;D:\Java\jdk1.8.0_231\jre\lib\sunrsasign.jar;D:\Java\jdk1.8.0_231\jre\lib\jsse.jar;D:\Java\jdk1.8.0_231\jre\lib\jce.jar;D:\Java\jdk1.8.0_231\jre\lib\charsets.jar;D:\Java\jdk1.8.0_231\jre\lib\jfr.jar;D:\Java\jdk1.8.0_231\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -62,5 +62,5 @@
     <property name="maven.repo.local" value="D:\Yooli\mavencangku"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testApp" classname="org.panta.AppTest" time="0.002"/>
+  <testcase name="testApp" classname="org.panta.AppTest" time="0"/>
 </testsuite>
