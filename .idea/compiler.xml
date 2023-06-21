@@ -10,6 +10,7 @@
         <module name="Zuul" />
         <module name="ServiceDemo" />
         <module name="ServiceMain" />
+        <module name="CloudRedis" />
         <module name="Eureka" />
         <module name="CloudCommon" />
       </profile>
@@ -18,6 +19,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="CloudCommon" options="-parameters" />
+      <module name="CloudRedis" options="-parameters" />
       <module name="Cloud_Panta" options="" />
       <module name="Eureka" options="-parameters" />
       <module name="ServiceDemo" options="-parameters" />

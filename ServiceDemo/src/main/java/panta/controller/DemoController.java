@@ -3,12 +3,12 @@ package panta.controller;
 import org.panta.common.enums.SimpleDateFormatType;
 import org.panta.common.utils.DateCommonUtil;
 import org.panta.common.utils.JsonUtil;
-import panta.config.redis.RedisUtils;
 import panta.feignClient.demo.MainFeignClient;
 import panta.model.demo.DemoModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import panta.service.demo.DemoService;
+import panta.redis.RedisUtils;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -33,15 +33,15 @@ public class DemoController {
             //获取缓存
             Object object =  redisUtils.get(demo.getId().toString());
             System.out.println("从缓存获取的数据"+ object);
-            //demoModel = (DemoModel) object;
-            demoModel = JsonUtil.jsonToPojo(redisUtils.get(demo.getId().toString(), 10).toString(),DemoModel.class);
+            demoModel = (DemoModel) object;
+            //demoModel = JsonUtil.jsonToPojo(redisUtils.get(demo.getId().toString(), 10).toString(),DemoModel.class);
         }else{
             //从数据库中获取信息
             System.out.println("从数据库中获取数据");
             demoModel = demoService.getDemo(demo);
             //数据插入缓存（set中的参数含义：key值，user对象，缓存存在时间10（long类型），时间单位）
-            //redisUtils.set(demo.getId().toString(),demoModel,10L, TimeUnit.MINUTES);
-            redisUtils.set(demo.getId().toString(), demoModel, 10, true, null);
+            redisUtils.set(demo.getId().toString(),demoModel,10L, TimeUnit.MINUTES);
+            //redisUtils.set(demo.getId().toString(), demoModel, 10, true, null);
             System.out.println("数据插入缓存" + demoModel.toString());
         }
         return demoModel;

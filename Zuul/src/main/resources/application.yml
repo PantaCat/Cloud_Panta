@@ -9,7 +9,7 @@ zuul:
   routes:
     demoservice: /api/**  #自定义路由地址(搭配关闭服务名访问配置使用)
     service-main: /main/**
-    cloud-common: /common/**
+    cloud-redis: /redis/**
 eureka:
   client:
     service-url:
