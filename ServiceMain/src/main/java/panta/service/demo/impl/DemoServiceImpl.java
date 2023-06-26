@@ -1,5 +1,6 @@
 package panta.service.demo.impl;
 
+import org.springframework.transaction.annotation.Transactional;
 import panta.mapper.demo.DemoMapper;
 import panta.model.demo.DemoModel;
 import panta.service.demo.DemoService;
@@ -19,7 +20,8 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    public DemoModel addDemo(DemoModel demoModel) {
+    @Transactional(rollbackFor = Exception.class)
+    public int addDemo(DemoModel demoModel) {
         return demoMapper.addDemo(demoModel);
     }
 }

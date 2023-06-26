@@ -2,7 +2,6 @@ package panta.controller;
 
 import org.panta.common.enums.SimpleDateFormatType;
 import org.panta.common.utils.DateCommonUtil;
-import org.panta.common.utils.JsonUtil;
 import panta.feignClient.demo.MainFeignClient;
 import panta.model.demo.DemoModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import panta.service.demo.DemoService;
 import panta.redis.RedisUtils;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -51,9 +51,19 @@ public class DemoController {
     public boolean addDemo(@RequestBody DemoModel demo){
         try{
             demoFeignClient.addDemo(demo);
+          //  new BigDecimal("10").divide(new BigDecimal("3"));
+
         }catch (Exception e){
-            e.printStackTrace();
-            return false;
+            DemoModel d = new DemoModel();
+            d.setName("异常了");
+            d.setNumber(new BigDecimal("100"));
+            demoFeignClient.addDemo(d);
+            throw new RuntimeException(e.getMessage());
+        }finally {
+            DemoModel d = new DemoModel();
+            d.setName("finally");
+            d.setNumber(new BigDecimal("100"));
+            demoFeignClient.addDemo(d);
         }
         return true;
     }
