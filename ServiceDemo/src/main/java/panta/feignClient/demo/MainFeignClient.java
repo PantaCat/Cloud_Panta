@@ -12,4 +12,7 @@ public interface MainFeignClient {
 
     @RequestMapping("/addDemo")
     boolean addDemo(DemoModel demoModel);
+
+    @RequestMapping("/addDemoLog")
+    boolean addDemoLog(DemoModel demoModel);
 }

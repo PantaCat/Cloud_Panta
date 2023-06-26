@@ -6,4 +6,7 @@ public interface DemoService {
 
     public DemoModel getDemo(DemoModel demoModel);
     public int addDemo(DemoModel demoModel);
+
+    public int addDemoLog(DemoModel demoModel);
+
 }

@@ -2,6 +2,7 @@ package panta.controller;
 
 import org.panta.common.enums.SimpleDateFormatType;
 import org.panta.common.utils.DateCommonUtil;
+import org.springframework.transaction.annotation.Transactional;
 import panta.feignClient.demo.MainFeignClient;
 import panta.model.demo.DemoModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,22 +50,7 @@ public class DemoController {
 
     @PostMapping("/addDemo")
     public boolean addDemo(@RequestBody DemoModel demo){
-        try{
-            demoFeignClient.addDemo(demo);
-          //  new BigDecimal("10").divide(new BigDecimal("3"));
-
-        }catch (Exception e){
-            DemoModel d = new DemoModel();
-            d.setName("异常了");
-            d.setNumber(new BigDecimal("100"));
-            demoFeignClient.addDemo(d);
-            throw new RuntimeException(e.getMessage());
-        }finally {
-            DemoModel d = new DemoModel();
-            d.setName("finally");
-            d.setNumber(new BigDecimal("100"));
-            demoFeignClient.addDemo(d);
-        }
+        demoFeignClient.addDemo(demo);
         return true;
     }
 

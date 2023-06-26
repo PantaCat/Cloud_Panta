@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import panta.service.demo.DemoService;
 
+import java.math.BigDecimal;
+
 @RestController
 public class DemoController {
 
@@ -21,6 +23,21 @@ public class DemoController {
     public boolean addDemo(@RequestBody DemoModel demo){
         try{
             demoService.addDemo(demo);
+        }catch (Exception e){
+            e.printStackTrace();
+            DemoModel d = new DemoModel();
+            d.setName("异常日志");
+            d.setNumber(new BigDecimal("100"));
+            demoService.addDemoLog(d);
+            return false;
+        }
+        return true;
+    }
+
+    @PostMapping("/addDemoLog")
+    public boolean addDemoLog(@RequestBody DemoModel demo){
+        try{
+            demoService.addDemoLog(demo);
         }catch (Exception e){
             e.printStackTrace();
             return false;
