@@ -1,4 +1,4 @@
-package panta.controller.exceptionHandler;
+package panta.common.exceptionHandler;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ExceptionHandler;

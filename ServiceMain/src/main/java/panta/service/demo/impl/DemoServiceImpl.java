@@ -7,7 +7,6 @@ import panta.service.demo.DemoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.math.BigDecimal;
 
 @Service
 public class DemoServiceImpl implements DemoService {
@@ -24,7 +23,7 @@ public class DemoServiceImpl implements DemoService {
     @Transactional(rollbackFor = Exception.class)
     public int addDemo(DemoModel demoModel) {
         demoMapper.addDemo(demoModel);
-        new BigDecimal("10").divide(new BigDecimal("3"));
+       // new BigDecimal("10").divide(new BigDecimal("3"));
         return 0;
     }
 
