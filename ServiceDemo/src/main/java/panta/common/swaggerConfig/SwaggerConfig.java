@@ -36,16 +36,16 @@ public class SwaggerConfig {
                 .build();
     }
 
-//    @Bean
-//    public Docket restApi2() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .groupName("其他接口")
-//                .apiInfo(apiInfo("Other APIs", "2.0"))
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage("com.xqnode.learning.other"))
-//                .paths(PathSelectors.regex("/other.*"))
-//                .build();
-//    }
+    @Bean
+    public Docket restApi2() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("TEST接口")
+                .apiInfo(apiInfo("随便试试TEST接口", "1.0"))
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("panta.controller"))
+                .paths(PathSelectors.regex("/test.*"))
+                .build();
+    }
 
     /**
      * 创建该API的基本信息（这些基本信息会展现在文档页面中）
