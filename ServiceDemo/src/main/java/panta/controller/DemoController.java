@@ -1,8 +1,10 @@
 package panta.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.panta.common.enums.SimpleDateFormatType;
 import org.panta.common.utils.DateCommonUtil;
-import org.springframework.transaction.annotation.Transactional;
 import panta.feignClient.demo.MainFeignClient;
 import panta.model.demo.DemoModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +12,12 @@ import org.springframework.web.bind.annotation.*;
 import panta.service.demo.DemoService;
 import panta.redis.RedisUtils;
 
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/demo")
+@Api(tags = "标准DEMO接口")
 public class DemoController {
 
     @Autowired
@@ -26,7 +28,10 @@ public class DemoController {
     private RedisUtils redisUtils;
 
     @PostMapping("/getDemo")
-    public DemoModel getDemo(@RequestBody DemoModel demo){
+    @ApiOperation(value = "getDemo", notes = "根据ID查询DemoModel对象")
+    public DemoModel getDemo(
+            @ApiParam(name = "接收DemoModel对象参数", defaultValue = "{}")
+            @RequestBody DemoModel demo){
         //查询缓存中是否存在
         boolean hasKey = redisUtils.exists(demo.getId().toString());
         DemoModel demoModel = null;

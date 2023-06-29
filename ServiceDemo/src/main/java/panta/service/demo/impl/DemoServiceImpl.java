@@ -6,6 +6,7 @@ import panta.service.demo.DemoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 
 @Service
 public class DemoServiceImpl implements DemoService {
@@ -15,6 +16,12 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public DemoModel getDemo(DemoModel demoModel) {
+       // new BigDecimal("100").divide(new BigDecimal("3"));
         return demoMapper.getDemo(demoModel);
+    }
+
+    @Override
+    public int addDemoLog(DemoModel demoModel) {
+        return demoMapper.addDemo(demoModel);
     }
 }
