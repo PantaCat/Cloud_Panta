@@ -6,7 +6,6 @@ import panta.service.demo.DemoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.math.BigDecimal;
 
 @Service
 public class DemoServiceImpl implements DemoService {

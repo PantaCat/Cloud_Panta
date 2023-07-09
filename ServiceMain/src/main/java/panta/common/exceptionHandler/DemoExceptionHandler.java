@@ -15,7 +15,7 @@ public class DemoExceptionHandler {
 
     /*
      *@ExceptionHandler注解中可以添加参数，
-     *参数是某个异常类的class，代表这个方法专门处理该类异常，比如这样：
+     *参数是某个异常类的class，代表这个方法专门处理该类异常，比如这样.
      */
     @ExceptionHandler(ArithmeticException.class)
     public String arithmeticExceptionHandler(Exception exception){
