@@ -1,0 +1,13 @@
+panta\controller\DemoController.class
+panta\service\demo\DemoService.class
+panta\mapper\demo\DemoMapper.class
+panta\feignClient\demo\MainFeignClient.class
+panta\common\aspect\DemoAspect.class
+panta\common\exceptionHandler\DemoExceptionHandler.class
+panta\common\swaggerConfig\SwaggerConfig.class
+panta\model\demo\DemoModel.class
+panta\service\demo\impl\DemoServiceImpl.class
+panta\controller\TestController.class
+panta\ServiceDemoApplication.class
+panta\App.class
+panta\common\retention\DemoRetention.class
